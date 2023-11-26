@@ -1,0 +1,72 @@
+*,
+::after,
+::before {
+  padding: 0;
+  margin: 0;
+  border: none;
+  outline: none;
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  height: 100vh;
+  background: radial-gradient(#000 30%, #af25 100%);
+}
+.wrapper {
+  width: 250px;
+  background: #fff;
+  padding: 15px;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid #ddd;
+  padding: 10px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.header i {
+  width: 25px;
+  height: 25px;
+  line-height: 25px;
+  cursor: pointer;
+}
+ul {
+  list-style: none;
+  height: 0;
+  overflow: hidden;
+  visibility: hidden;
+  transition: all 0.3s;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+ul::-webkit-scrollbar {
+  display: none;
+}
+ul.active {
+  height: 150px;
+  overflow: auto;
+  visibility: visible;
+}
+ul li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+ul li:hover {
+  padding-left: 15px;
+  transform: scale(1.1);
+}
+ul li i {
+  font-size: 18px;
+}
